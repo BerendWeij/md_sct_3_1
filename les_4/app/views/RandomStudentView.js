@@ -12,10 +12,28 @@ app.randomStudentsView = {
     init: function(){
 
         // Grab the template script from the dom
+        var templateSrc = document.querySelector("#students-template").innerHTML;
+
+        this.template = Handlebars.compile(templateSrc);
+        this.container = document.querySelector(".container");
+
+        // deze data moet UIT de view gehaald worden
+        // jullie hebben je data in studentsModel.js staan!
+        var testData = {
+            students: [
+                {firstName:"Gianni"},
+                {firstName:"Luuk"},
+                {firstName:"Joris"},
+                {firstName:"Anton"}
+            ]
+        };
 
         // Transform the HTML template into a 'real' template
+        this.render(testData);
+    },
 
-
+    render:function(data){
+        this.container.innerHTML = this.template(data);
     }
 
 }
