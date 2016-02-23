@@ -7,7 +7,7 @@ var app = app || {};
 app.studentsModel = {
 
     loadStudents: function() {
-
+        // hiervandaan ga je je PHP pagina benaderen
     }
 
 

@@ -7,7 +7,14 @@ var app = app || {};
 
 app.randomStudentsView = {
 
+    // onze init functie voeren we 1x uit
+    // deze functie initialiseert alles
     init: function(){
+
+        // Grab the template script from the dom
+
+        // Transform the HTML template into a 'real' template
+
 
     }
 
